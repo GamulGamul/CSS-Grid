@@ -1,0 +1,81 @@
+/* 
+    가로축 몇개 컬럼, 사이즈 
+    grid-template-clumns
+
+*/
+
+/* 
+    새로 몇개 row, 사이즈 
+    grid-template-rows
+*/
+
+/* 
+    플렉스블하게 사용가능
+    grid-template-areas
+
+    grid-column-gap
+    grid-row-gap
+*/
+
+/* 
+    grid cell 
+    grid-column-start
+    grid-column-end
+    grid-row-start
+    grid-row-end
+    grid-area
+*/
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #222;
+    word-break: break-all;
+    padding: 30px;
+}
+
+.color1 {
+  background-color: #d7bee2;
+}
+.color2 {
+  background-color: #a9c7d8;
+}
+.color3 {
+  background-color: #c0df9f;
+}
+.color4 {
+  background-color: #f2e5a6;
+}
+.color5 {
+  background-color: #e89d9d;
+}
+
+.container {
+    display: grid;
+    padding: 20px;
+    
+    /* grid-template-columns: 100px 100px 100px; */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: repeat(5, 1fr); */
+    
+    /* grid-template-rows: 100px 200px 100px 100px; */
+    /* grid-template-rows: repeat(2, 200px); */
+    /* grid-auto-rows: 150px; */
+    grid-auto-rows: minmax(150px, auto);
+
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+    grid-gap:10px;
+}
+
+.item2 {
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
